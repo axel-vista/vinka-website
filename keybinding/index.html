@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#fffef9">
+  <title>Vinka | Keybindings</title>
+  <link rel="icon" type="image/png" href="../shared/images/vinka-mark.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="vendor/qrcodegen.js" defer></script>
+  <script src="../shared/device.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="tool-page mapping-page">
+  <a class="skip-link" href="#main">Skip to controls</a>
+  <header class="tool-header"><div class="tool-header-inner"><a class="brand" href="../" aria-label="Vinka home" data-usb-navigation><img src="../shared/images/vinka-mark.png" alt="" width="40" height="36"><span>VINKA</span></a><nav class="tool-nav" aria-label="Device tools"><a href="../keybinding/" aria-current="page" data-usb-navigation>Keybindings</a><a href="../setup/" data-usb-navigation>Receiver setup</a></nav></div></header>
+  <main class="app" id="main" tabindex="-1">
+    <div class="tool-intro"><p class="tool-eyebrow">DEVICE TOOLS</p><h1>Keybindings</h1><p>Choose the commands your receiver sends.</p></div>
+    <div class="panel" aria-label="Keybinding editor">
+      <section class="usb-panel" aria-label="USB connection">
+        <div class="usb-actions">
+          <button id="usb-connect" type="button">Connect USB</button>
+          <button id="usb-disconnect" type="button" class="secondary" hidden>Disconnect</button>
+        </div>
+        <p id="usb-status" class="usb-status" role="status">Plug in your board, then click Connect USB.</p>
+      </section>
+      <form id="mapping-form">
+        <label for="layout">Keyboard layout on the receiving PC</label>
+        <select id="layout"><option value="us">English (US)</option><option value="sv">Swedish (SE)</option></select>
+        <div class="mapping-labels" aria-hidden="true"><span>WHEN I TYPE</span><span>THE PC GETS</span></div>
+        <div id="mapping-rows"></div>
+        <datalist id="special-keys"><option value="Space"><option value="Enter"><option value="Backspace"><option value="Tab"><option value="ArrowLeft"><option value="ArrowRight"><option value="ArrowUp"><option value="ArrowDown"></datalist>
+        <button id="add-mapping" type="button" class="secondary">Add mapping <span aria-hidden="true">+</span></button>
+        <div class="field-meta"><span id="connection">Connect USB to edit mappings</span><span id="mapping-count">0 / 64 mappings</span></div>
+        <button id="save" disabled>Save mappings <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="result" class="result" role="status" aria-live="polite">Save updates the board without typing anything.</p>
+      <small>Use a character or special-key name. Mappings are case-sensitive and apply once. Use Space for a space.</small>
+      <section id="phone-pairing" class="phone-pairing" aria-labelledby="phone-heading" hidden>
+        <a id="qr-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open the paired Wi-Fi keyboard page"><canvas id="phone-qr" role="img" aria-label="QR code for the paired Wi-Fi keyboard page"></canvas></a>
+        <div><h2 id="phone-heading">Keyboard link</h2><p>Use the same Wi-Fi network on your phone.</p><a id="phone-link" class="phone-link" href="#" target="_blank" rel="noopener noreferrer">Open Wi-Fi keyboard ↗</a></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

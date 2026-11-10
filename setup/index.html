@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#fffef9">
+  <title>Vinka | Receiver setup</title>
+  <link rel="icon" type="image/png" href="../shared/images/vinka-mark.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="../shared/device.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="tool-page setup-page">
+  <a class="skip-link" href="#main">Skip to controls</a>
+  <header class="tool-header"><div class="tool-header-inner"><a class="brand" href="../" aria-label="Vinka home" data-usb-navigation><img src="../shared/images/vinka-mark.png" alt="" width="40" height="36"><span>VINKA</span></a><nav class="tool-nav" aria-label="Device tools"><a href="../keybinding/" data-usb-navigation>Keybindings</a><a href="../setup/" aria-current="page" data-usb-navigation>Receiver setup</a></nav></div></header>
+  <main class="app" id="main" tabindex="-1">
+    <div class="tool-intro"><p class="tool-eyebrow">DEVICE TOOLS</p><h1>Receiver setup</h1><p>Connect your receiver to a Wi-Fi network.</p></div>
+    <div class="panel" aria-label="Wi-Fi configuration">
+      <section class="usb-panel" aria-label="USB connection">
+        <div class="usb-actions">
+          <button id="usb-connect" type="button">Connect USB</button>
+          <button id="usb-disconnect" type="button" class="secondary" hidden>Disconnect</button>
+        </div>
+        <p id="usb-status" class="usb-status" role="status">Plug in your board, then click Connect USB.</p>
+      </section>
+      <form id="setup-form" class="setup-form">
+        <label for="ssid">Wi-Fi network name</label>
+        <input id="ssid" autocomplete="off" required placeholder="Network name">
+        <label for="password">Wi-Fi password</label>
+        <input id="password" type="password" autocomplete="new-password" placeholder="Leave empty for an open network">
+        <label for="layout">Keyboard layout on the receiving PC</label>
+        <select id="layout"><option value="us">English (US)</option><option value="sv">Swedish (SE)</option></select>
+        <button id="connect" disabled>Connect to Wi-Fi <span aria-hidden="true">↗</span></button>
+      </form>
+      <p id="status" class="result" role="status" aria-live="polite">Connect USB to configure Wi-Fi.</p>
+      <a id="trigger-link" class="link-button" href="#" target="_blank" rel="noopener noreferrer" hidden>Open Wi-Fi keyboard <span aria-hidden="true">↗</span></a>
+    </div>
+  </main>
+</body>
+</html>

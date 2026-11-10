@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#fffef9">
+  <title>Vinka | Keyboard</title>
+  <link rel="icon" type="image/png" href="../shared/images/vinka-mark.png">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="tool-page keyboard-page">
+  <a class="skip-link" href="#main">Skip to controls</a>
+  <header class="tool-header"><div class="tool-header-inner"><span class="brand"><img src="../shared/images/vinka-mark.png" alt="" width="40" height="36"><span>VINKA</span></span><span class="tool-badge" id="keyboard-mode">Wi-Fi keyboard</span></div></header>
+  <main class="app" id="main" tabindex="-1">
+    <div class="tool-intro"><p class="tool-eyebrow" id="keyboard-label">LIVE CONTROL</p><h1>Keyboard</h1><p id="keyboard-description">Typing sends immediately to the connected computer.</p></div>
+    <p id="preview-note" class="preview-note" role="note" hidden><strong>Preview only.</strong> No receiver is connected and no commands are sent.</p>
+    <div class="panel" aria-label="Live keyboard controls">
+      <section class="connection-panel" aria-label="Receiver connection"><span id="status" role="status" aria-live="polite">Connecting…</span></section>
+      <label for="pad">Type here</label>
+      <textarea id="pad" aria-label="Live keyboard" aria-describedby="input-hint" rows="3" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" disabled></textarea>
+      <p id="input-hint" class="help">Typing sends immediately.</p>
+      <p id="preview-output" class="preview-output" role="status" aria-live="polite" hidden>Try typing or pressing a key.</p>
+      <section class="control-section" aria-labelledby="shortcuts-heading">
+        <div class="section-heading"><h2 id="shortcuts-heading">Shortcuts</h2><span class="section-note">Next key only</span></div>
+        <div class="modifiers" aria-label="Shortcut modifiers">
+          <button type="button" data-mod="Ctrl" aria-pressed="false" disabled>Ctrl</button>
+          <button type="button" data-mod="Alt" aria-pressed="false" disabled>Alt</button>
+          <button type="button" data-mod="Shift" aria-pressed="false" disabled>Shift</button>
+          <button type="button" data-mod="Meta" aria-pressed="false" disabled>Win / ⌘</button>
+        </div>
+      </section>
+      <section class="control-section" aria-labelledby="keys-heading">
+        <div class="section-heading"><h2 id="keys-heading">Special keys</h2></div>
+        <div class="keys" aria-label="Special keys">
+          <button type="button" data-key="Escape" disabled>Esc</button>
+          <button type="button" data-key="Tab" disabled>Tab</button>
+          <button type="button" data-key="Backspace" aria-label="Backspace" disabled>⌫</button>
+          <button type="button" data-key="Enter" disabled>Enter ↵</button>
+          <button type="button" data-key="ArrowLeft" aria-label="Arrow left" disabled>←</button>
+          <button type="button" data-key="ArrowDown" aria-label="Arrow down" disabled>↓</button>
+          <button type="button" data-key="ArrowUp" aria-label="Arrow up" disabled>↑</button>
+          <button type="button" data-key="ArrowRight" aria-label="Arrow right" disabled>→</button>
+          <button type="button" data-key="Home" disabled>Home</button>
+          <button type="button" data-key="End" disabled>End</button>
+          <button type="button" data-key="Delete" disabled>Delete</button>
+          <button type="button" id="stop" disabled>Stop</button>
+        </div>
+      </section>
+      <p id="error" role="alert"></p>
+    </div>
+  </main>
+</body>
+</html>
