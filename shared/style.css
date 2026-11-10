@@ -29,6 +29,7 @@ body { margin: 0; font-size: 12px; line-height: 1.7; }
 .tool-header { background: var(--paper); border-bottom: 1px solid #1f274115; }
 .tool-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(1160px, calc(100% - 96px)); margin-inline: auto; min-height: 89px; padding-block: 20px; }
 .tool-header .brand { text-decoration: none; font-size: 27px; gap: 11px; }
+.tool-nav[hidden] { display: none; }
 .tool-nav { display: flex; align-items: center; gap: 28px; }
 .tool-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; text-decoration: none; }
 .tool-nav a:hover, .tool-nav a[aria-current] { text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 2px; }
@@ -137,9 +138,9 @@ a { color: var(--navy); text-underline-offset: 3px; }
   .modifiers button, .keys button { font-size: 11px; }
 }
 @media (max-width: 420px) {
-  .mapping-page .tool-header-inner, .setup-page .tool-header-inner { flex-wrap: wrap; gap: 12px; padding-bottom: 0; }
+  .mapping-page .tool-header-inner, .setup-page .tool-header-inner, .preview-page .tool-header-inner { flex-wrap: wrap; gap: 12px; padding-bottom: 0; }
   .tool-nav { width: 100%; justify-content: space-between; border-top: 1px solid #1f274115; }
-  .mapping-page .tool-header .brand, .setup-page .tool-header .brand { min-height: 39px; }
+  .mapping-page .tool-header .brand, .setup-page .tool-header .brand, .preview-page .tool-header .brand { min-height: 39px; }
   .phone-pairing canvas { width: 166px; height: 166px; }
   .usb-actions button { flex: 1; min-width: 120px; }
   .usb-actions .secondary { min-width: 100px; }

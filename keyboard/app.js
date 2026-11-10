@@ -14,7 +14,8 @@
   if(preview) {
     document.title='Vinka | Keyboard preview';$('keyboard-label').textContent='PREVIEW';
     $('preview-note').hidden=false;$('preview-output').hidden=false;
-    $('keyboard-mode').textContent='Keyboard preview';
+    document.body.classList.add('preview-page');
+    $('keyboard-mode').hidden=true;$('preview-navigation').hidden=false;
     $('keyboard-description').textContent='Try the controls without a receiver.';
     $('input-hint').textContent='Preview only. Your input is shown below.';
   }
