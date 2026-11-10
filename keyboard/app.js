@@ -12,7 +12,7 @@
   let commands=[], modifiers=new Set(), active=null;
   const sentinel='\u200b';
   if(preview) {
-    document.title='Vinka | Keyboard preview';$('keyboard-label').textContent='PREVIEW';
+    document.title='Vinka | Keyboard preview';$('keyboard-label').textContent='VINKA APP · PREVIEW';
     $('preview-note').hidden=false;$('preview-output').hidden=false;
     document.body.classList.add('preview-page');
     $('keyboard-mode').hidden=true;$('preview-navigation').hidden=false;
