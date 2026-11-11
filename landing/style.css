@@ -11,6 +11,10 @@
 .site-nav a:hover, .site-nav a[aria-current] { text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 2px; }
 .tool-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 25px; padding: 10px 17px; min-height: 44px; border: 1px solid var(--navy); background: var(--navy); color: var(--paper); border-radius: 4px; font-size: 12px; font-weight: 700; }
 .tool-link:hover, .cta:hover { background: #333f62; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.github-link { gap: 12px; background: transparent; color: var(--navy); }
+.github-link:hover { background: var(--cream); }
+
 .hero-band, .cream-band { position: relative; overflow: hidden; background: radial-gradient(ellipse at 85% 10%, #e8e9d9 0%, transparent 55%), linear-gradient(115deg, #f7efda, #faf7ea); border-block: 1px solid #1f274115; }
 .hero-band::before, .cream-band::before { content: ""; pointer-events: none; position: absolute; width: 570px; height: 570px; border: 1px solid #1f274112; border-radius: 50%; top: -270px; right: -100px; }
 .hero { display: grid; position: relative; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 65px; padding-block: 64px; }
