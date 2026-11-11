@@ -62,6 +62,8 @@ a { color: var(--navy); text-underline-offset: 3px; }
 .help, small { display: block; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .help { margin-top: 8px; }
 .result { margin: 16px 0 8px; min-height: 20px; font-size: 11px; overflow-wrap: anywhere; }
+.mapping-page .result:empty { display: none; }
+.mapping-page small { margin-top: 12px; }
 .result.success { color: #29633d; }
 .result.error, #error { color: #a02e2b; }
 .usb-panel, .connection-panel { padding: 18px; margin-bottom: 24px; border-radius: 7px; background: var(--navy); color: var(--paper); }

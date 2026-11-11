@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#fffef9">
   <title>Vinka | Keybindings</title>
   <link rel="icon" type="image/png" href="../shared/images/vinka-mark.png">
-  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/style.css?v=2">
   <script src="vendor/qrcodegen.js" defer></script>
   <script src="../shared/device.js" defer></script>
   <script src="app.js" defer></script>
@@ -37,7 +37,7 @@
         <div class="field-meta"><span id="connection">Connect USB to edit mappings</span><span id="mapping-count">0 / 64 mappings</span></div>
         <button id="save" disabled>Save mappings <span aria-hidden="true">→</span></button>
       </form>
-      <p id="result" class="result" role="status" aria-live="polite">Save updates the board without typing anything.</p>
+      <p id="result" class="result" role="status" aria-live="polite"></p>
       <small>Use a character or special-key name. Mappings are case-sensitive and apply once. Use Space for a space.</small>
       <section id="phone-pairing" class="phone-pairing" aria-labelledby="phone-heading" hidden>
         <a id="qr-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open the paired Wi-Fi keyboard page"><canvas id="phone-qr" role="img" aria-label="QR code for the paired Wi-Fi keyboard page"></canvas></a>
